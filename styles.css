@@ -1,38 +1,60 @@
+*{
+  margin: 0;
+  padding: 0;
+}
 body{
-  height: 100%;
-  margin:0px;
-  padding: 0px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+  font-family: Roboto,  sans-serif;
+  
 }
 
 .layout{
-  height: 100%;
   display: grid;
-  grid-template-columns: 1fr 4fr;
-  grid-template-rows: auto 1fr;
+  grid-template-columns: 20% 80%;
+ 
 }
 .side-bar{
   background: rgb(10, 147, 210);
   color: white;
-  grid-column: 1/2;
-  grid-row: 1/3;
+  height: 100vh;
 }
 
-.logo-section{
+.logo-text{
   display: flex;
-  padding-right: 30px;
-  grid-column: 1/2;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 20px;
 }
-.logo{
-  width: 30px;
+
+.icon-text{
+  display: flex; 
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10px 40px;
+}
+
+.log-text h1{
+  font-size: 25px;
+  margin-left: 20px;
+}
+.icon-text p{
+  margin-left: 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.icon-text> img, .logo-text> img{
+  width: 24px;
+  height: 24px;
   padding-right: 10px;
   padding-left: 20px;
   -webkit-filter: invert(100%);
 }
 
-.menu{
-  display: flex;
+.list-items-bottom{
+  margin-top: 50px;
 }
+
 
 .section-1{
   padding-top: 20px;
@@ -40,11 +62,20 @@ body{
 .section-2{
   padding-top: 40px;
 }
-.header{
-  grid-column: 2/3;
-  grid-row: 1/2;
-  padding-bottom: 10px;
+
+.main{
+  background-color: white;
+  height: 100vh;
+  display:grid;
+  grid-template-rows: 20% 80%;
 }
+.header{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.trend-image-text>img,
 .small-profile-pic{
   width: 40px;
   height: 40px;
@@ -54,7 +85,7 @@ body{
 }
 
 .big-profile-pic{
-  width: 80px;
+  width: 60px;
   border-radius: 50%;
   margin-right: 14px;
 }
@@ -105,7 +136,7 @@ body{
 .profile-section{
   display: flex;
   justify-content: space-between;
-  padding: 14px 75px 0 40px;
+  padding: 14px 75px 0px 40px;
   
 }
 
@@ -125,65 +156,137 @@ body{
   line-height: 25px;;
 }
 
-.main{
-  background: rgb(231, 235, 235);
-  grid-row: 2/span 1;
-  
-}
-
 button{
   background-color: rgb(10, 147, 210);
-  border: none;
-  border-radius: 20px;
-  padding: 10px 30px;
+  padding: 10px 30px 10px 30px;
   color: white;
-  margin: 0px 10px;
-}
-
-.grid-title{
-  padding-left: 15px;
-  grid-template-rows: 2/3;
-}
-
-.project{
-  border-left: 10px solid #e8b639;
-  border-radius: 8px;
-  padding-left: 20px;
-  background: white;
-  height: 200px;
- 
-  
+  border:none;
+  border-radius: 18px;
+  margin-right: 10px;
   
 }
-
-.main-grid{
+.content{
+  background-color:  rgb(231, 235, 235);
   display: grid;
-  grid-template-columns: 2fr 2fr;
-  justify-content: space-between;
-  grid-column: 1/2;
-  gap: 25px;
-  padding-left: 14px;
+  grid-template-columns: 70% 30%;
   
 }
 
-.main-side{
-  grid-column:2/3;
-}
-
-.your-projects-section{
+.cards{
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 50% 50%;
+
 }
 
-.grid-titles{
-  display: flex;
-  justify-content: space-between;
-  padding-right: 220px;
+.projects>h3{
+  padding: 10px 0 0px 16px;
 }
 
-.logos{
-  width: 20px;
+.ann>h3{
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+.icons{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-};
+  padding: 40px 0 0 260px;
+  
+
+  
+  
+  
+}
+
+.icons>img{
+  width: 20px;
+}
+
+.card{
+  border-left: 5px solid #e8b639;
+  border-radius: 10px;
+  background-color: white;
+  width: 80%;
+  height: 100px;
+  margin: 15px 0;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  align-items: flex-start;
+  padding-left: 15px;
+
+}
+
+
+
+.card> p{
+  color: grey;
+  padding: 10px 0 10px 0;
+  font-size: 12px;
+}
+
+.ann-card,
+.trend-card{
+  height: 70%;
+  width: 80%;
+  background-color: white;
+  border-radius: 5px;
+}
+.ann-trend{
+  display: grid;
+  grid-template-rows: 50% 50%;
+
+}
+
+.ann-text h6, .trend-text h6{
+  font-size: 12px;
+}
+
+.ann-text p, .trend-text p{
+  font-size: 10px;
+  color:grey;
+}
+
+.ann-text{
+  padding: 10px 15px;
+}
+
+.divider{
+  border: 0.5px solid rgb(206, 202, 202);
+  width: 80%;
+  margin-left: 20px;
+}
+
+
+.trend-image-text{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 20px;
+  padding: 10px 0 5px 0;
+  
+
+}
+
+.trend-card{
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 15px 0px;
+}
+.trend-text{
+  margin-left: 20px;
+}
+
+
+.trend>h4{
+  margin-top: -25px;
+
+}
+.ann-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
